@@ -1,20 +1,11 @@
 import { LightningElement } from "lwc";
 
-export default class Vacation extends LightningElement {
+export default class App extends LightningElement {
   title = "Vacation Requests";
-    value = ['option1'];
+  personalRequests = "View only my requests";
+  submitButtonText = "New Request";
 
-    get options() {
-        return [
-            { label: 'View only my requests', value: 'option1' },
-        ];
-    }
-
-    get selectedValues() {
-        return this.value.join(',');
-    }
-
-    handleChange(e) {
-        this.value = e.detail.value;
-    }
+  toggleRequestForm() {
+    this.submitButtonText = "Pressed the button";
+  }
 }

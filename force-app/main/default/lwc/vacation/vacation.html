@@ -9,8 +9,10 @@
 					<input type="checkbox" name="options" id="checkbox-unique-id-73" value="checkbox-unique-id-73" checked="" />
 					<label class="slds-checkbox__label" for="checkbox-unique-id-73">
         <span class="slds-checkbox_faux"></span>
-        <span class="slds-form-element__label">View only my requests</span>
+        <span class="slds-form-element__label">{personalRequests}</span>
       </label>
+					<button class="slds-button slds-button_brand"
+					onclick={toggleRequestForm}>{submitButtonText}</button>
 				</div>
 			</div>
 		</div>
