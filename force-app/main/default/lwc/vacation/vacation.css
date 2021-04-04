@@ -11,3 +11,6 @@ p {
     height: 100vh;
     overflow: scroll;
 }
+.slds-button_brand {
+    float: right;
+}
