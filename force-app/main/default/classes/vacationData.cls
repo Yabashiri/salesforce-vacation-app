@@ -1,4 +1,4 @@
 public with sharing class vacationData {
-    public vacationData() {
+    public static void vacationData() {
     }
 }
