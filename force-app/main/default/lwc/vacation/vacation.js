@@ -4,8 +4,9 @@ export default class App extends LightningElement {
   title = "Vacation Requests";
   personalRequests = "View only my requests";
   submitButtonText = "New Request";
+  requestWindowIsVisible = false;
 
   toggleRequestForm() {
-    this.submitButtonText = "Pressed the button";
+    this.requestWindowIsVisible = !this.requestWindowIsVisible;
   }
 }
