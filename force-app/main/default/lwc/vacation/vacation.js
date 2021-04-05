@@ -11,9 +11,12 @@ export default class App extends LightningElement {
     this.requestWindowIsVisible = !this.requestWindowIsVisible;
   }
 
-  request_fields = [
-    "RequestType__c",
-    "StartDate__c",
-    "EndDate__c"
-  ];
+  handleSuccess() {
+    const event = new ShowToastEvent({
+        variant: 'success',
+        title: 'Success!',
+        message: 'Record has been created.',
+    });
+    this.dispatchEvent(event);
+}
 }
