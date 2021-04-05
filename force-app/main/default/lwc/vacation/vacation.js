@@ -1,4 +1,5 @@
 import { LightningElement } from "lwc";
+import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class App extends LightningElement {
   title = "Vacation Requests";
@@ -9,4 +10,10 @@ export default class App extends LightningElement {
   toggleRequestForm() {
     this.requestWindowIsVisible = !this.requestWindowIsVisible;
   }
+
+  request_fields = [
+    "RequestType__c",
+    "StartDate__c",
+    "EndDate__c"
+  ];
 }

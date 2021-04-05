@@ -15,6 +15,19 @@
 						onclick={toggleRequestForm}>{submitButtonText}</button>
 				</div>
 			</div>
+
+			<template if:false={requestWindowIsVisible}>
+				<lightning-record-edit-form object-api-name="Vacation_Request__c">
+					<lightning-messages>
+					</lightning-messages>
+					<lightning-output-field field-name="RequestType__c">
+					</lightning-output-field>
+					<lightning-output-field field-name="StartDate__c">
+					</lightning-output-field>
+					<lightning-output-field field-name="EndDate__c">
+					</lightning-output-field>
+				</lightning-record-edit-form>
+			</template>
 		</div>
 
 		<!--Modal window for a new request-->
@@ -32,7 +45,6 @@
 						</button>
 						<h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">{submitButtonText}</h2>
 						<!--Record edit form-->
-
 						<p class="slds-m-top_x-small">Test </p>
 					</header>
 					<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
